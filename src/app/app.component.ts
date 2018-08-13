@@ -14,6 +14,7 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 export class AppComponent {
 
   theSpinThing:boolean = false;
+  currentYear:string = new Date().getFullYear().toString();
 
   constructor(
     private auth: AuthService,
@@ -45,4 +46,6 @@ export class AppComponent {
     return outlet.activatedRouteData.title;
     
   }
+
+
 }

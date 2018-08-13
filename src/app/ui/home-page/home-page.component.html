@@ -8,7 +8,11 @@
     <!-- Vertically Center Content -->
     <div class="logo">
         <img src="../assets/images/logo.png" alt="Zen Dog Grooming, LLC"/>
-        <a href="https://www.facebook.com/christinacasey8/" class="social"><i class="fab fa-facebook"></i></a>
+        <div class="social">
+            <a href="https://www.instagram.com/zendoggroomingllc/" target="_blank"><i class="fab fa-instagram"></i></a>
+            &#160;<a href="https://www.facebook.com/christinacasey8/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        
     </div>
     <div class="v-center">
         
@@ -18,15 +22,77 @@
     </div>
 </section>
 <section class="contact-header">
-    <h2>CONTACT US FOR BOOKING INFORMATION</h2>
+    <h2>CONTACT US FOR BOOKING &amp; INFORMATION</h2>
 </section>
-<section>
-    <div class="columns">
+<section class="contact-body">
+    <div class="columns is-centered">
+        <div class="column is-1"></div>
         <div class="column">
+            <p>
+                <b>Location</b><br/>
+                217 W. Broad Street<br />
+                Quakertown, Pennsylvania 18951
+            </p>
+            <p>
+                <b>Phone</b><br />
+                (215) 538-8338
+            </p>
+            <p>
+                <iframe width="80%" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:EikyMTcgVyBCcm9hZCBTdCwgUXVha2VydG93biwgUEEgMTg5NTEsIFVTQSIxEi8KFAoSCTEJQ_ahGMSJEYKapg92_ZF-ENkBKhQKEglpW047HiLEiREKbpmHjjlCtQ&key=AIzaSyCZBvtqR0-JFHrTBdpl2gCwhUtBEEP7BtE" allowfullscreen></iframe>
+            </p>
+        </div>
+        <div class="column ">
+            <form [formGroup]="userForm" *ngIf="!formSubmitted" (ngSubmit)="mailMe()">
 
-        </div>
-        <div class="column">
+                <div class="field">
+                    <label for="email">Name *</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="email" class="input" formControlName="email" name="email" required placeholder="e.g. jdoe@bmail.com" />
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.email }}</p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Phone Number *</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="email" class="input" formControlName="email" name="email" required placeholder="e.g. jdoe@bmail.com" />
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.email }}</p>
+                </div>
+    
+                <div class="field">
+                    <label for="email">Email Address *</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="email" class="input" formControlName="email" name="email" required placeholder="e.g. jdoe@bmail.com" />
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.email }}</p>
+                </div>
+                
+                <div class="field">
+                    <label for="password">Message</label>
+                    <div class="control">
+                        <textarea type="text" class="textarea" formControlName="message" name="message" required rows="6"></textarea>
+                    </div>
+                    <p *ngIf="formErrors.message" class="help is-danger">{{ formErrors.message }}</p>
+                </div>
+                
             
+                <!--<div *ngIf="userForm.valid" class="notification is-success">Form is valid</div>-->
+                <button type="submit" class="button" [disabled]="!userForm.valid">Submit</button>
+            
+            </form>
+            <p *ngIf="formSubmitted && !formSuccess"><i class="fas fa-spinner fa-pulse"></i> Sending message...</p>
+            <p *ngIf="formSuccess">Thank you for reaching out!<br />Your message was logged successfully and I will get back to you soon</p>
         </div>
+        <div class="column is-1"></div>
     </div>
 </section>
