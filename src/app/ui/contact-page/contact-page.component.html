@@ -1,15 +1,28 @@
 
-<!--<h1>About</h1>-->
-<h2>Ask me anything.</h2>
-<!--<hr>-->
-<br />
+
 <form [formGroup]="userForm" *ngIf="!formSubmitted" (ngSubmit)="mailMe()">
 
-    
+        <div class="field">
+                <label for="name">Name *</label>
+                <div class="control ">
+                    <input type="text" class="input" formControlName="name" name="name" required placeholder="" />
+                </div>
+                <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.email }}</p>
+            </div>
+            <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="tel" class="input" formControlName="phone" name="phone" placeholder="000-000-0000" />
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                    </div>
+                    <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.email }}</p>
+                </div>
     <div class="field">
-        <label for="email">Email Address</label>
+        <label for="email">Email Address *</label>
         <div class="control has-icons-left has-icons-right">
-            <input type="email" class="input" formControlName="email" name="email" required placeholder="e.g. jdoe@bmail.com" />
+            <input type="email" class="input" formControlName="email" name="email" required placeholder="" />
             <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
             </span>
@@ -18,7 +31,7 @@
     </div>
     
     <div class="field">
-        <label for="password">Message</label>
+        <label for="password">Inquiry *</label>
         <div class="control">
             <textarea type="text" class="textarea" formControlName="message" name="message" required rows="6"></textarea>
         </div>
@@ -31,4 +44,4 @@
 
 </form>
 <p *ngIf="formSubmitted && !formSuccess"><i class="fas fa-spinner fa-pulse"></i> Sending message...</p>
-<p *ngIf="formSuccess">Thank you for reaching out!<br />Your message was logged successfully and I will get back to you soon</p>
+<p *ngIf="formSuccess">Thank you for reaching out!<br />Your message was recieved and I will get back to you shortly.</p>

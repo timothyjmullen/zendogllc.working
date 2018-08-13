@@ -3,7 +3,7 @@ import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angula
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {forkJoin, throwError} from 'rxjs';
 
-type UserFields = 'email' | 'message';
+type UserFields = 'email' | 'message' | 'name' | 'phone';
 type FormErrors = { [u in UserFields]: string };
 
 
@@ -26,11 +26,19 @@ export class ContactPageComponent implements OnInit {
   formErrors: FormErrors = {
     'email': '',
     'message': '',
+    'name': '',
+    'phone': '',
   };
   validationMessages = {
     'email': {
       'required': 'Email is required.',
       'email': 'Value must be a valid email address.',
+    },
+    'name': {
+      'required': 'Name is required.',
+    },
+    'phone': {
+      'tel': 'Value must be a valid phone number.',
     },
     'message': {
       'required': 'Message is required.',
@@ -46,6 +54,12 @@ export class ContactPageComponent implements OnInit {
       'message': ['', [
         Validators.required,
       ]],
+      'name': ['', [
+        Validators.required,
+      ]],
+      'phone': ['', [
+        Validators.required,
+      ]],
     });
 
     this.userForm.valueChanges.subscribe((data) => this.onValueChanged(data));
@@ -57,7 +71,7 @@ export class ContactPageComponent implements OnInit {
     if (!this.userForm) { return; }
     const form = this.userForm;
     for (const field in this.formErrors) {
-      if (Object.prototype.hasOwnProperty.call(this.formErrors, field) && (field === 'email' || field === 'message')) {
+      if (Object.prototype.hasOwnProperty.call(this.formErrors, field) && (field === 'email' || field === 'message' || field === 'name' || field === 'phone')) {
         // clear previous error message (if any)
         this.formErrors[field] = '';
         const control = form.get(field);
@@ -81,7 +95,7 @@ export class ContactPageComponent implements OnInit {
     headers.append('Accept', 'application/json');
 
     this.http.post(
-      'https://usebasin.com/f/7f3002eb78bc.json', 
+      'https://usebasin.com/f/b4201aa8a936.json', 
       this.userForm.value,
       { headers: headers}
     ).subscribe(

@@ -9,6 +9,10 @@
 }
 .contact-body {
     margin-top:40px;
+    padding:0 5%;
+}
+.varb {
+    border-left:1px solid #ccc;
 }
 
 
@@ -288,6 +292,9 @@
    .sect-banner .v-center {
         vertical-align:bottom;
         padding-bottom:20px;
+    }
+    .varb {
+        border:none;
     }
   }
   
