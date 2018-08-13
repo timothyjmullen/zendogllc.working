@@ -1,0 +1,285 @@
+.contact-header {
+    background-color:#65a595;
+    padding:15px 10px;
+    text-align:center;
+}
+.contact-header h2 {
+    color:#FFF;
+    font-weight:normal;
+}
+
+
+/*----------------------------------------------   
+--Banner
+-----------------------------------------------  */
+.logo {
+    position:absolute;
+    top:20px;
+    left:5%;
+    right:0px;
+    text-align:left;
+  }
+  .logo img {
+    width:auto;
+    height:auto;
+  }
+  .sect-banner {
+    display: table;
+    width: 100%;
+    text-align: center;
+    height: 50vw;
+        min-height:550px;
+        max-height:750px;
+    color: rgba(255, 255, 255, 1);}
+  
+  .sect-banner p, h1 {
+    text-align:left;
+    padding-left:6%;
+  }
+  .sect-banner h1 {
+    padding-top:40px;
+  }
+  .sect-banner p {
+    font-family:'Open Sans', sans-serif;
+    font-size:30px;
+    line-height:32px;
+    font-weight:400;
+    padding-top:10px;
+    max-width:600px;
+    text-shadow: 1px 1px 32px rgba(0,0,0,0.2);
+  }
+    /*----------------------------------------------   
+    -DEMO2: Banner bg
+    -----------------------------------------------  */ 
+    .sect-banner:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50vw;
+        min-height:550px;
+        max-height:750px;
+      width: 100%;
+      background: rgba(118, 144, 164, 0.1);
+      z-index: 0; }
+    .sect-banner .v-center {
+      position: relative;
+      z-index: 2; 
+    }
+  
+    .sect-banner .v-center {
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      z-index: 4;
+       }
+  
+    .sect-banner .banner-bg {
+        height: 50vw;
+        min-height:550px;
+        max-height:750px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: 80% 20%;
+      z-index: 0;
+      background-image: url(../../../assets/images/banner1.jpg);
+      -webkit-animation: slider-sm linear 30s both infinite;
+      -moz-animation: slider-sm linear 30s both infinite;
+      animation: slider-sm linear 30s both infinite; }
+      @media (min-width: 58em) {
+        .sect-banner .banner-bg {
+          background-image: url(../../../assets/images/banner1.jpg);
+          -webkit-animation: slider-lg linear 30s both infinite;
+          -moz-animation: slider-lg linear 30s both infinite;
+          animation: slider-lg linear 30s both infinite; } }
+  
+  /*----------------------------------------------   
+  -DEMO1: Unordered list
+  -----------------------------------------------  */
+  ul.kf-slider li {
+    height: 50vw;
+    min-height:550px;
+    max-height:750px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 20%;
+    z-index: 0;
+    opacity: 0;
+    -webkit-animation: fade-out 30s infinite both;
+    -moz-animation: fade-out 30s infinite both;
+    animation: fade-out 30s infinite both;
+    background-image: url(../../../assets/images/banner1-sm.jpg); }
+    @media (min-width: 58em) {
+      ul.kf-slider li {
+        background-image: url(../../../assets/images/banner1.jpg); } }
+  ul.kf-slider li:nth-child(2) {
+    background-image: url(../../../assets/images/banner2-sm.jpg);
+    -webkit-animation-delay: 11s;
+    -moz-animation-delay: 11s;
+    animation-delay: 11s; }
+    @media (min-width: 58em) {
+      ul.kf-slider li:nth-child(2) {
+        background-image: url(../../../assets/images/banner2.jpg); } }
+  ul.kf-slider li:nth-child(3) {
+    background-image: url(../../../assets/images/banner3-sm.jpg);
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;
+    animation-delay: 20s; }
+    @media (min-width: 58em) {
+      ul.kf-slider li:nth-child(3) {
+        background-image: url(../../../assets/images/banner3.jpg); } }
+  
+  
+  
+  /*----------------------------------------------   
+  --Fade ins
+  -----------------------------------------------  */
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0; }
+    30% {
+      opacity: 1; } }
+  @-moz-keyframes fade-in {
+    0% {
+      opacity: 0; }
+    30% {
+      opacity: 1; } }
+  @keyframes fade-in {
+    0% {
+      opacity: 0; }
+    30% {
+      opacity: 1; } }
+  /*----------------------------------------------   
+  --Fade out for slider
+  -----------------------------------------------  */
+  @-webkit-keyframes fade-out {
+    33% {
+      opacity: 1; }
+    66% {
+      opacity: 0; } }
+  @-moz-keyframes fade-out {
+    33% {
+      opacity: 1; }
+      66% {
+      opacity: 0; } }
+  @keyframes fade-out {
+    33% {
+      opacity: 1; }
+      66% {
+      opacity: 0; } }
+  /*----------------------------------------------   
+  --Keyframes Slider - Sm
+  -----------------------------------------------  */
+  @-webkit-keyframes slider-sm {
+    0% {
+      background-image: url(../../../assets/images/banner1-sm.jpg); }
+    33% {
+      background-image: url(../../../assets/images/banner2-sm.jpg); }
+    66% {
+      background-image: url(../../../assets/images/banner3-sm.jpg); }
+    100% {
+      background-image: url(../../../assets/images/banner1-sm.jpg); } }
+  @-moz-keyframes slider-sm {
+    0% {
+      background-image: url(../../../assets/images/banner1-sm.jpg); }
+    33% {
+      background-image: url(../../../assets/images/banner2-sm.jpg); }
+    66% {
+      background-image: url(../../../assets/images/banner3-sm.jpg); }
+    100% {
+      background-image: url(../../../assets/images/banner1-sm.jpg); } }
+  @keyframes slider-sm {
+    0% {
+      background-image: url(../../../assets/images/banner1-sm.jpg); }
+    33% {
+      background-image: url(../../../assets/images/banner2-sm.jpg); }
+    66% {
+      background-image: url(../../../assets/images/banner3-sm.jpg); }
+    100% {
+      background-image: url(../../../assets/images/banner1-sm.jpg); } }
+  /*----------------------------------------------   
+  --Keyframes Slider - Lg
+  -----------------------------------------------  */
+  @-webkit-keyframes slider-lg {
+    0% {
+      background-image: url(../../../assets/images/banner1.jpg); }
+    33% {
+      background-image: url(../../../assets/images/banner2.jpg); }
+    66% {
+      background-image: url(../../../assets/images/banner3.jpg); }
+    100% {
+      background-image: url(../../../assets/images/banner1.jpg); } }
+  @-moz-keyframes slider-lg {
+    0% {
+      background-image: url(../../../assets/images/banner1.jpg); }
+    33% {
+      background-image: url(../../../assets/images/banner2.jpg); }
+    66% {
+      background-image: url(../../../assets/images/banner3.jpg); }
+    100% {
+      background-image: url(../../../assets/images/banner1.jpg); } }
+  @keyframes slider-lg {
+    0% {
+      background-image: url(../../../assets/images/banner1.jpg); }
+    33% {
+      background-image: url(../../../assets/images/banner2.jpg); }
+    66% {
+      background-image: url(../../../assets/images/banner3.jpg); }
+    100% {
+      background-image: url(../../../assets/images/banner1.jpg); } }
+  
+  .social {
+    color:#fff;
+    font-size:24px;
+    float:right;
+    position:absolute;
+    right:2%;
+    top:0;cursor:pointer;
+    z-index:999;
+    text-shadow: 1px 1px 32px rgba(0,0,0,0.2);
+  }
+  .social:hover {
+    border-bottom:2px solid #FFF;
+    
+  }
+      
+  @media screen and (max-width:768px), (max-device-width:768px) {
+   /*.v-center {
+       top:450px;
+       background-color:#000;
+   }*/
+   .logo {
+       margin:auto;
+       text-align:center;
+       width:100%;
+       left:0;
+       top:0;
+       background-color:#65a595;
+   }
+   ul.kf-slider li, .sect-banner .banner-bg, .sect-banner, .sect-banner:after {
+       background-position:80% top;
+       background-size: cover;
+       margin-top:140px;
+       min-height:0;
+       height:60vh;
+   }
+   .v-center h1 {
+       font-size:3em;
+       padding-top:90px;
+   }
+   .v-center p {
+       font-size:1.5em;
+       padding-right:10px;
+   }
+   .sect-banner .v-center {
+        vertical-align:bottom;
+        padding-bottom:20px;
+    }
+  }
+  

@@ -1,0 +1,18 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a id="navToggle" role="button" class="navbar-burger" (click)="toggleCollapse()" [ngClass]="{'is-active': show}">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" [ngClass]="{'is-active': show}">
+        <div class="navbar-end">
+            <a class="navbar-item" routerLink="/about" [routerLinkActive]="['active']">ABOUT</a>
+            <a class="navbar-item" routerLink="/projects" [routerLinkActive]="['active']">PROJECTS</a>
+            <!--<a class="navbar-item" routerLink="/thoughts" [routerLinkActive]="['active']">THOUGHTS</a>-->
+            <a class="navbar-item" routerLink="/contact" [routerLinkActive]="['active']">CONTACT</a>
+        </div>
+    </div>
+</nav>

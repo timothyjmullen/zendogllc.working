@@ -1,0 +1,22 @@
+<h1>Do I know you? Please login.</h1>
+
+<hr>
+
+<div *ngIf="!(auth.user | async); else alreadyLoggedIn">
+    <button (click)="signInWithGoogle()" class="button btn-social btn-google">
+        <i class="fab fa-google"></i> Login with Google
+    </button>
+
+    <hr>
+
+    <!--<user-form></user-form>-->
+
+</div>
+
+<ng-template #alreadyLoggedIn>
+  <p class="text-success">
+      <i class="fas fa-user-astronaut"></i> You are logged in.
+  </p>
+  
+  <button class="button" (click)="logout()">Logout</button>
+</ng-template>
