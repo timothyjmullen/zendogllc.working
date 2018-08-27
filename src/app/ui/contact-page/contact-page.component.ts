@@ -38,7 +38,7 @@ export class ContactPageComponent implements OnInit {
       'required': 'Name is required.',
     },
     'phone': {
-      'tel': 'Value must be a valid phone number.',
+      'minlength': 'Value must be a valid phone number.',
     },
     'message': {
       'required': 'Message is required.',
@@ -58,7 +58,7 @@ export class ContactPageComponent implements OnInit {
         Validators.required,
       ]],
       'phone': ['', [
-        Validators.required,
+        Validators.minLength,
       ]],
     });
 

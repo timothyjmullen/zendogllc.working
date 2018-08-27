@@ -7,17 +7,17 @@
                 <div class="control ">
                     <input type="text" class="input" formControlName="name" name="name" required placeholder="" />
                 </div>
-                <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.email }}</p>
+                <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.name }}</p>
             </div>
             <div class="field">
                     <label for="phone">Phone Number</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input type="tel" class="input" formControlName="phone" name="phone" placeholder="000-000-0000" />
+                        <input type="tel" class="input" formControlName="phone" name="phone" placeholder="000-000-0000" minlength="10" />
                         <span class="icon is-small is-left">
                             <i class="fas fa-phone"></i>
                         </span>
                     </div>
-                    <p *ngIf="formErrors.email" class="help is-danger">{{ formErrors.email }}</p>
+                    <p *ngIf="formErrors.phone" class="help is-danger">{{ formErrors.phone }}</p>
                 </div>
     <div class="field">
         <label for="email">Email Address *</label>

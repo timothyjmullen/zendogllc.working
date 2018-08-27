@@ -2,14 +2,36 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124248015-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124248015-1');
+    </script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <meta charset="utf-8">
-    <title>Zend Dog Grooming, LLC</title>
+    <title>Zen Dog Grooming, LLC</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Zen Dog Grooming offers high quality, holistic grooming services and pet products. Located in downtown Quakertown.">
+    <meta name="keywords" content="dog, pet, grooming, quakertown, pennsylvania, bucks county, pet products, dog accessories" />
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="manifest" href="manifest.json">
+
+    <!-- Facebook Share Data -->
+    <meta property="og:url" content="https://zendogllc.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zen Dog Grooming, LLC" />
+    <meta property="og:description" content="Zen Dog Grooming offers high quality, holistic grooming services and pet products. Located in downtown Quakertown." />
+    <meta property="og:image" content="https://zendogllc.com/assets/images/fbshare.jpg" />
+    <meta property="fb:app-id" content="309388306311056"/>
+
 </head>
 
 <body>
@@ -20,6 +42,44 @@
     <div class="loading">
         <i class="fal fa-spinner-third fa-pulse"></i>     
     </div>
+    
+    <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://www.zendogllc.com",
+    "contactPoint": [
+        { "@type": "ContactPoint",
+        "telephone": "+1-215-538-8338",
+        "contactType": "customer service"
+        }
+    ],
+    "address": "217 W. Broad Street, Quakertown, Pennsylvania 18951",
+    "brand": "Zen Dog Grooming, LLC",
+    "legalName": "Zen Dog Grooming, LLC",
+    "description": "Zen Dog Grooming offers high quality, holistic grooming services and pet products. Located in downtown Quakertown."
+    }
+</script>
+<script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '309388306311056',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v3.1'
+          });
+        
+          FB.AppEvents.logPageView();
+        
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
 </body>
-
 </html>
