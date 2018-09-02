@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy-page.component';
+import { GroomingServicesPageComponent } from './grooming-services-page/grooming-services-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
@@ -20,6 +21,7 @@ import { UserFormComponent } from './user-form/user-form.component';
     HomePageComponent,
     ContactPageComponent,
     PrivacyPolicyPageComponent,
+    GroomingServicesPageComponent,
     MainNavComponent,
     LoadingSpinnerComponent,
     NotificationMessageComponent,

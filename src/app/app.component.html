@@ -1,14 +1,40 @@
 <div id="wrapper" class="content">
-    
+    <section class="sect-banner">
+        <!--List items for bg images -->
+        <ul class="kf-slider">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="logo">
+            <a routerLink="/" [routerLinkActive]="['active']"><img src="../assets/images/logo.png" alt="Zen Dog Grooming, LLC"
+                /></a>
+            <div class="social">
+                <a href="https://www.instagram.com/zendoggroomingllc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                &#160;<a href="https://www.facebook.com/christinacasey8/" target="_blank"><i class="fab fa-facebook"></i></a><br
+                />
+            </div>
+            <main-nav></main-nav>
+        </div>
+        <!-- Hero Text -->
+        <div class="v-center">
+            <h1>{{heroTitle}}</h1>
+            <p>{{heroText}}</p>
+        </div>
+    </section>
     <router-outlet #o="outlet"></router-outlet>
 </div>
 <footer>
-    &copy; {{currentYear}} Zen Dog Grooming, LLC
-    
-    <div class="social">
-        <a class="is-size-6" style="vertical-align:3px;" routerLink="/privacy-policy" [routerLinkActive]="['active']">Privacy Policy</a>    
-        &#160;&#160;<a class="ficon" href="https://www.instagram.com/zendoggroomingllc/" target="_blank"><i class="fab fa-instagram"></i></a>
-        &#160;<a class="ficon" href="https://www.facebook.com/christinacasey8/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <div class="columns">
+        <div class="column is-size-7">
+            &copy; {{currentYear}} Zen Dog Grooming, LLC
+        </div>
+        <div class="column">
+            <div class="social">
+                <a class="is-size-7" style="vertical-align:3px;" routerLink="/privacy-policy" [routerLinkActive]="['active']">Privacy Policy</a>
+                &#160;&#160;<a class="ficon" href="https://www.instagram.com/zendoggroomingllc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                &#160;<a class="ficon" href="https://www.facebook.com/christinacasey8/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
     </div>
 </footer>
-

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent {
-
+  
   show = false;
 
   constructor() { }
@@ -15,4 +15,7 @@ export class MainNavComponent {
     this.show = !this.show;
   }
 
+  
+
 }
+

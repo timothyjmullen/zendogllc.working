@@ -15,7 +15,10 @@ export class AppComponent {
 
   theSpinThing:boolean = false;
   currentYear:string = new Date().getFullYear().toString();
-
+  heroTitle:string = "WELCOME TO ZEN DOG GROOMING";
+  heroText:string = "Bucks County’s newest shop for high quality, holistic grooming services and pet products."
+  private fragment: string;
+  
   constructor(
     private auth: AuthService,
     private router: Router,
@@ -36,7 +39,9 @@ export class AppComponent {
     }),
     filter((route) => route.outlet === 'primary'),
     mergeMap((route: any) => route.data)).subscribe((event) => {
-        this.titleService.setTitle('Zen Dog Grooming, LLC – ' + event['title']);
+        this.titleService.setTitle('Zen Dog Grooming – ' + event['title']);
+        this.heroTitle = event['heroTitle'];
+        this.heroText = event['heroText'];
     })
   }
 
@@ -47,5 +52,17 @@ export class AppComponent {
     
   }
 
+  ngOnInit() {
+    this.activatedRoute.fragment.subscribe(fragment => { this.fragment = fragment; });
+  }
+
+  ngAfterViewInit(): void {
+    try {
+      console.log(this.fragment);
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
+  }
+
+   
 
 }

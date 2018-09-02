@@ -73,9 +73,9 @@ contact-page {width:100%;}
 
 a {
     color: $gray-dark;
-    text-decoration:underline;
+    /*text-decoration:underline;*/
     &:hover {
-        color: darken($gray-dark, 10%)
+        color: darken($gray-dark, 10%);
     }
 }
 
@@ -167,3 +167,16 @@ app-root:empty+.loading {
 .button {
     margin-right: 5px;
 }
+
+/*----------------------------------------------   
+--Sub Header
+-----------------------------------------------  */
+.sub-header {
+    background-color:#65a595;
+    padding:15px 10px;
+    text-align:center;
+  }
+  .sub-header h2 {
+    color:#FFF;
+    font-weight:normal;
+  }

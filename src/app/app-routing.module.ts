@@ -8,10 +8,37 @@ import { HomePageComponent } from './ui/home-page/home-page.component';
 import { NotesListComponent } from './notes/notes-list/notes-list.component';
 import { UploadPageComponent } from './uploads/upload-page/upload-page.component';*/
 import { PrivacyPolicyPageComponent } from './ui/privacy-policy-page/privacy-policy-page.component';
+import { GroomingServicesPageComponent } from './ui/grooming-services-page/grooming-services-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent, data: {title: 'Home'}, pathMatch: 'full' },
-  { path: 'privacy-policy',  component: PrivacyPolicyPageComponent, data: {title: 'Privacy Policy'} },
+  { 
+    path: '', 
+    component: HomePageComponent, 
+    data: {
+      title: 'Home', 
+      heroTitle: 'NOW OPEN!', 
+      heroText:'Zen Dog Grooming is Bucks County\'s newest shop for high quality, holistic grooming services and pet products.'
+    }, 
+    pathMatch: 'full'
+  },
+  { 
+    path: 'privacy-policy',  
+    component: PrivacyPolicyPageComponent, 
+    data: {
+      title: 'Privacy Policy', 
+      heroTitle: 'PRIVACY POLICY', 
+      heroText:''
+    } 
+  },
+  { 
+    path: 'grooming-services',  
+    component: GroomingServicesPageComponent, 
+    data: {
+      title: 'Grooming Services', 
+      heroTitle:'GROOMING SERVICES', 
+      heroText:''
+    } 
+  },
 ];
 
 @NgModule({
